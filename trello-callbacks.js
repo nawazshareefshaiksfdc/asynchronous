@@ -1,6 +1,6 @@
 function getBoard(callback) {
   console.log('Fetching board...');
-  return setTimeout(function() {
+  return setTimeout(function () {
     let board = {
       id: "def453ed",
       name: "Thanos"
@@ -12,7 +12,7 @@ function getBoard(callback) {
 
 function getLists(boardId, callback) {
   console.log(`Fetching lists for board id ${boardId}...`);
-  return setTimeout(function() {
+  return setTimeout(function () {
     let lists = {
       def453ed: [
         {
@@ -48,7 +48,7 @@ function getLists(boardId, callback) {
 
 function getCards(listId, callback) {
   console.log(`Fetching cards for list id ${listId}...`);
-  return setTimeout(function() {
+  return setTimeout(function () {
     let cards = {
       qwsa221: [
         {
@@ -118,6 +118,8 @@ function getCards(listId, callback) {
   }, 1000);
 }
 
+
+module.exports = { getBoard, getCards, getLists }
 // Task 1 board -> lists -> cards for list qwsa221
 // Task 2 board -> lists -> cards for list qwsa221 and cards for list jwkh245 simultaneously
 // Task 3 board -> lists -> cards for all lists simultaneously

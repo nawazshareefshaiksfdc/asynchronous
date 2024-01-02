@@ -1,4 +1,4 @@
-
+const {getBoard,getLists,getCards} = require('./trello-promises');
 async function task1() {
   try {
     const board = await getBoard();
@@ -10,8 +10,7 @@ async function task1() {
   }
 }
 
-// Execute Task 1
-task1();
+
 
 async function task2() {
   try {
@@ -26,8 +25,7 @@ async function task2() {
   }
 }
 
-// Execute Task 2
-task2();
+
 
 async function task3() {
   try {
@@ -41,5 +39,7 @@ async function task3() {
   }
 }
 
-// Execute Task 3
-task3();
+
+task1();
+// task2();
+// task3();

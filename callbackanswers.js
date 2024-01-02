@@ -19,18 +19,25 @@ let task1 = () => {
 
 let task2 = () => {
   getBoard(board =>
-    getLists(board.id,(lists)=>{
-      let targetList = lists.find(list=>list.id == 'qwsa221');
-      getCards(targetList.id,(cards)=>{
-        cards.forEach((card)=>{
-          console.log(card);
+    getLists(board.id, (lists) => {
+      setTimeout(() => {
+        let targetList = lists.find(list => list.id == 'qwsa221');
+        getCards(targetList.id, (cards) => {
+          cards.forEach((card) => {
+            console.log(card);
+          })
         })
-      })
+      }, 2000);
+      setTimeout(() => {
+        let targetList = lists.find(list => list.id == 'jwkh245');
+        getCards(targetList.id, (cards) => {
+          cards.forEach((card) => {
+            console.log(card);
+          })
+        })
+      }, 2000);
     }))
 }
-
-
-
 
 
 let task3 = () => {
@@ -49,5 +56,5 @@ let task3 = () => {
 
 
 // task1();
-task2();
-// task3();
+// task2();
+task3();
